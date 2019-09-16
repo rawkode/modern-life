@@ -40,11 +40,9 @@ const SiteContentWrapper = styled.div`
 const SiteContent = styled.main`
   padding: 2rem 1rem 2rem;
   transition: 0.25s var(--ease-in-out-quad);
-  opacity: ${p => (p.navOpen ? 0.3 : 1)};
 
   ${mediaqueries.desktop_up`
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateX(30vw);
     padding: 7rem 3rem 3rem;
   `};
 `;
