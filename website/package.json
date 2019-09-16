@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "hunter chang",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop --host=0.0.0.0",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "gatsby": "^2.15.9",
+    "gatsby-theme-rawkode": "*",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}

@@ -1,0 +1,23 @@
+version: "2.4"
+
+volumes:
+  root_node_modules: ~
+  theme_node_modules: ~
+  website_node_modules: ~
+
+services:
+  node:
+    build:
+      context: .
+      target: development
+    entrypoint: echo
+    command:
+      - Please use `make dshell`
+    working_dir: /app
+    volumes:
+      - .:/app
+      - root_node_modules:/app/node_modules
+      - theme_node_modules:/app/gatsby-theme-rawkode/node_modules
+      - website_node_modules:/app/website/node_modules
+    ports:
+      - 8000:8000
