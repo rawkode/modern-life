@@ -28,7 +28,7 @@ const SiteWrapper = styled.div`
   display: flex;
   min-height: 100vh;
   overflow-x: hidden;
-  background: ${p => p.theme.colors.background};
+  background: '${p => p.theme.colors.background};'
   transition: background 0.25s var(--ease-in-out-quad);
 `;
 
@@ -41,12 +41,11 @@ const SiteContent = styled.main`
   padding: 2rem 1rem 2rem;
   transition: 0.25s var(--ease-in-out-quad);
   opacity: ${p => (p.navOpen ? 0.3 : 1)};
-  transform: ${p => (p.navOpen ? `translateX(-200vw)` : null)};
+
   ${mediaqueries.desktop_up`
     transform: translateX(0);
     opacity: 1;
     padding: 7rem 3rem 3rem;
-    max-width: 50rem;
   `};
 `;
 

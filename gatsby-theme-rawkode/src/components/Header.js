@@ -48,7 +48,6 @@ const StyledHeader = styled.header`
   background: ${p => p.theme.colors.background};
   transition: all 0.25s var(--ease-in-out-quad);
   border-bottom: 1px solid ${p => p.theme.colors.borderColor};
-  transform: ${p => (p.navOpen ? `translateX(16rem)` : null)};
   ${mediaqueries.desktop_up`
     position: fixed;
     top: 0;
