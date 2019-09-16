@@ -27,7 +27,7 @@ export default {
       background: 'hsl(230,25%,18%)',
       primary: 'hsl(260, 100%, 80%)',
       secondary: 'hsl(290, 100%, 80%)',
-      sidebar: 'hsla(230, 20%, 0%, 20%)',
+      sidebar: 'hsl(260, 100%, 60%)',
       borderColor: 'rgba(255, 255, 255, 0.15)'
     }
   }
