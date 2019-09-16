@@ -55,13 +55,13 @@ const SidebarNav = styled.nav`
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  width: 100vw;
 
   transition: 0.25s var(--ease-in-out-quad);
   transform: ${p => (p.navOpen ? null : `translateX(-100vw)`)};
 
   ${mediaqueries.desktop_up`
     width: 30vw;
-    background: red !important;
     transform: translateX(0);
     padding: 6.6rem 0 1rem;
   `};
@@ -71,8 +71,8 @@ const SidebarToggle = styled.aside`
   position: fixed;
   top: 1vh;
   bottom: 0;
+  left: 0;
   width: 100px;
-  right: 1vw;
   font-size: 36px;
 
   ${mediaqueries.desktop_up`
