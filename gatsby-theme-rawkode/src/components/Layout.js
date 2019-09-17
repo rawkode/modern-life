@@ -26,7 +26,6 @@ const Layout = ({ children, location }) => {
 
 const SiteWrapper = styled.div`
   display: flex;
-  min-height: 100vh;
   overflow-x: hidden;
   background: '${p => p.theme.colors.background};'
   transition: background 0.25s var(--ease-in-out-quad);
