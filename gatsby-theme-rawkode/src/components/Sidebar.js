@@ -13,6 +13,7 @@ const Sidebar = ({ navOpen, toggleSidebar }) => {
         <SidebarToggle>
           <a onClick={() => toggleSidebar(!navOpen)}>&times;</a>
         </SidebarToggle>
+
         <Avatar githubHandle="rawkode" size={100} round="20px" />
         <h1>Rawkode</h1>
         <p>
@@ -31,15 +32,11 @@ const SidebarWrapper = styled.aside`
 
   ${mediaqueries.desktop_up`
     width: 30vw;
-    margin-: -30vw;
     flex: 0 0 30vw;
-    margin-: 0;
   `};
 
   ${mediaqueries.phone`
     width: 100vw;
-    margin-: -100vw;
-    flex: 0 0 100vw;
   `};
 `;
 
@@ -49,7 +46,6 @@ const SidebarNav = styled.nav`
   bottom: 0;
   overflow-y: auto;
   height: 100%;
-  padding: 1rem 0;
   background: ${p => p.theme.colors.sidebar};
   color: ${p => p.theme.colors.text};
   transition: 0.25s var(--ease-in-out-quad);
@@ -59,6 +55,8 @@ const SidebarNav = styled.nav`
   flex-direction: column;
   text-align: center;
   width: 100vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 
   transition: 0.25s var(--ease-in-out-quad);
   transform: ${p => (p.navOpen ? null : `translateX(-100vw)`)};
@@ -66,7 +64,6 @@ const SidebarNav = styled.nav`
   ${mediaqueries.desktop_up`
     width: 30vw;
     transform: translateX(0);
-    padding: 6.6rem 0 1rem;
   `};
 `;
 
