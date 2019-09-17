@@ -3,14 +3,14 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import Layout from './Layout';
+import SEO from './SEO';
 
-const DocsTemplate = ({ data, location }) => {
+const Page = ({ data, location }) => {
   const { mdx } = data;
 
   return (
-    <Layout tableOfContents={mdx.tableOfContents} location={location}>
+    <Layout location={location}>
       <SEO title={mdx.frontmatter.title} description={mdx.frontmatter.description} />
       <Heading>{mdx.frontmatter.title}</Heading>
       <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -26,7 +26,7 @@ const Heading = styled.h1`
   }
 `;
 
-DocsTemplate.propTypes = {
+Page.propTypes = {
   data: PropTypes.shape({
     mdx: PropTypes.object.isRequired
   }).isRequired,
@@ -37,7 +37,6 @@ export const pageQuery = graphql`
   query($id: String!) {
     mdx(fields: { id: { eq: $id } }) {
       body
-      tableOfContents
       frontmatter {
         title
         description
@@ -46,4 +45,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default DocsTemplate;
+export default Page;

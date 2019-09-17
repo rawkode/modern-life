@@ -14,7 +14,7 @@ const StyledIconButton = styled.button`
   padding: 0;
   background: none;
   border: none;
-  color: ${p => p.theme.colors.text};
+  color: ${p => p.theme.colors.colorSwitcher};
   cursor: pointer;
   font-size: 0.8rem;
   &:hover {

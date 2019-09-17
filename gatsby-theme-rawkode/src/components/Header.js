@@ -7,7 +7,6 @@ import ColorToggle from './icons/ColorToggle';
 import IconButton from './icons/IconButton';
 import Menu from './icons/Menu';
 import LogoWrapper from './LogoWrapper';
-import SocialIcons from './SocialIcons';
 
 const Header = ({ navOpen, setNavOpen }) => {
   const { cycleColorMode } = useCycleColor();
@@ -27,7 +26,6 @@ const Header = ({ navOpen, setNavOpen }) => {
         <LogoWrapper />
       </HeaderSection>
       <HeaderSection>
-        <SocialIcons />
         <IconButton
           label="Change Theme Color"
           icon={<ColorToggle />}
@@ -47,11 +45,11 @@ const StyledHeader = styled.header`
   z-index: 5;
   background: ${p => p.theme.colors.sidebar};
   transition: all 0.25s var(--ease-in-out-quad);
-  border-bottom: 1px solid ${p => p.theme.colors.borderColor};
+  color: ${p => p.theme.colors.text};
   ${mediaqueries.desktop_up`
     position: fixed;
     top: 0;
-    left: 0;
+    left: 30vw;
     right: 0;
     padding: 1rem 1.2rem;
     transform: translateX(0);

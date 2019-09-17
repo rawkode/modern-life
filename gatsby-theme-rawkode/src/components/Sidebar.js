@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Avatar from 'react-avatar';
+import SocialIcons from './SocialIcons';
 import mediaqueries from '../styles/media';
 
 const Sidebar = ({ navOpen, toggleSidebar }) => {
@@ -19,6 +20,7 @@ const Sidebar = ({ navOpen, toggleSidebar }) => {
           Professional, from Glasgow (Scotland), that is currently a Developer Advocate for
           InfluxData, a San Francisco based database company.
         </p>
+        <SocialIcons />
       </SidebarNav>
     </SidebarWrapper>
   );
@@ -49,6 +51,7 @@ const SidebarNav = styled.nav`
   height: 100%;
   padding: 1rem 0;
   background: ${p => p.theme.colors.sidebar};
+  color: ${p => p.theme.colors.text};
   transition: 0.25s var(--ease-in-out-quad);
   display: flex;
   align-items: center;

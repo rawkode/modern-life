@@ -13,10 +13,11 @@ const Layout = ({ children, location }) => {
   return (
     <Styled.root>
       <Global styles={globalStyles} />
-      <Header navOpen={navOpen} setNavOpen={setNavOpen} />
+
       <SiteWrapper>
         <SiteContentWrapper>
           <Sidebar navOpen={navOpen} toggleSidebar={setNavOpen} />
+          <Header navOpen={navOpen} setNavOpen={setNavOpen} />
           <SiteContent navOpen={navOpen}>{children}</SiteContent>
         </SiteContentWrapper>
       </SiteWrapper>

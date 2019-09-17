@@ -8,7 +8,7 @@ const SVG = ({ children, viewBox }) => (
 );
 
 const StyledSVG = styled.svg`
-  fill: ${p => p.theme.colors.text};
+  fill: ${p => p.theme.colors.colorSwitcher};
   transition: all ${p => p.theme.transition};
   &:hover,
   &:focus {

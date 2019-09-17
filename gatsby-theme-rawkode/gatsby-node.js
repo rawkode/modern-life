@@ -11,7 +11,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                 id
                 slug
               }
-              tableOfContents
             }
           }
         }
@@ -25,7 +24,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allMdx.edges.forEach(({ node }) => {
     actions.createPage({
       path: node.fields.slug ? node.fields.slug : '/',
-      component: require.resolve('./src/templates/docs'),
+      component: require.resolve('./src/components/Page.js'),
       context: {
         id: node.fields.id
       }
