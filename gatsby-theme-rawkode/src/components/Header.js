@@ -38,7 +38,12 @@ const Header = ({ navOpen, setNavOpen }) => {
 };
 
 const StyledHeader = styled.header`
+  position: fixed;
+  width: 100vw;
+  height: 8vh;
   display: flex;
+  top: 0px;
+  left: 0px;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1rem;
@@ -46,11 +51,11 @@ const StyledHeader = styled.header`
   background: ${p => p.theme.colors.sidebar};
   transition: all 0.25s var(--ease-in-out-quad);
   color: ${p => p.theme.colors.text};
+
   ${mediaqueries.desktop_up`
-    position: fixed;
-    top: 0;
+    top: 0vw;
+    width: 70vw;
     left: 30vw;
-    right: 0;
     padding: 1rem 1.2rem;
     transform: translateX(0);
 
@@ -60,6 +65,7 @@ const StyledHeader = styled.header`
 const NavIconButton = styled.div`
   display: flex;
   margin-right: 1rem;
+
   ${mediaqueries.desktop_up`
     display: none;
   `};

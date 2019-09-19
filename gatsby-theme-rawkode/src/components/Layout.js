@@ -10,15 +10,16 @@ import Sidebar from './Sidebar';
 
 const Layout = ({ children, location }) => {
   const [navOpen, setNavOpen] = useState(false);
+  console.log(`navOpen is ${navOpen}`);
   return (
     <Styled.root>
       <Global styles={globalStyles} />
 
       <SiteWrapper>
-        <SiteContentWrapper>
-          <Sidebar navOpen={navOpen} toggleSidebar={setNavOpen} />
+        <Sidebar navOpen={navOpen} toggleSidebar={setNavOpen} />
+        <SiteContentWrapper navOpen={navOpen}>
           <Header navOpen={navOpen} setNavOpen={setNavOpen} />
-          <SiteContent navOpen={navOpen}>{children}</SiteContent>
+          <SiteContent>{children}</SiteContent>
         </SiteContentWrapper>
       </SiteWrapper>
     </Styled.root>
@@ -27,24 +28,33 @@ const Layout = ({ children, location }) => {
 
 const SiteWrapper = styled.div`
   display: flex;
-  overflow-x: hidden;
   background: '${p => p.theme.colors.background};'
   transition: background 0.25s var(--ease-in-out-quad);
+  overflow: hidden;
 `;
 
 const SiteContentWrapper = styled.div`
-  flex-grow: 1;
-  min-width: 20rem;
+  display: flex;
+  flex: 1 0 100vw;
+  flex-direction: column;
+  transition: transform 0.5s;
+  transform: ${p => (p.navOpen ? `translateX(0vw)` : `translateX(-100vw)`)};
+
+  ${mediaqueries.desktop_up`
+    padding-left: 30vw;
+    flex: 1 0 70vw;
+    transform: none;
+    overflow: hidden;
+  `};
 `;
 
 const SiteContent = styled.main`
-  padding: 2rem 1rem 2rem;
-  transition: 0.25s var(--ease-in-out-quad);
-
   ${mediaqueries.desktop_up`
-    transform: translateX(30vw);
-    padding: 7rem 3rem 3rem;
+    padding: 1em;
+    padding-top: 10vh;
   `};
+
+  padding-top: 10vh;
 `;
 
 Layout.propTypes = {

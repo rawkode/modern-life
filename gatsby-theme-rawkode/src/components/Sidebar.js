@@ -8,8 +8,8 @@ import mediaqueries from '../styles/media';
 const Sidebar = ({ navOpen, toggleSidebar }) => {
   console.log(`toggle is ${navOpen}`);
   return (
-    <SidebarWrapper>
-      <SidebarNav navOpen={navOpen}>
+    <SidebarWrapper navOpen={navOpen}>
+      <SidebarNav>
         <SidebarToggle>
           <a onClick={() => toggleSidebar(!navOpen)}>&times;</a>
         </SidebarToggle>
@@ -28,43 +28,31 @@ const Sidebar = ({ navOpen, toggleSidebar }) => {
 };
 
 const SidebarWrapper = styled.aside`
-  font-size: 0.875rem;
+  display: flex;
+  flex: 0 0 100vw;
+  height: 100vh;
+  transform: ${p => (p.navOpen ? `translateX(0vw)` : `translateX(-100vw)`)};
+  transition: transform 0.5s;
 
   ${mediaqueries.desktop_up`
+    position: fixed;
     width: 30vw;
-    flex: 0 0 30vw;
-  `};
-
-  ${mediaqueries.phone`
-    width: 100vw;
+    transform: none;
   `};
 `;
 
 const SidebarNav = styled.nav`
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  overflow-y: auto;
-  height: 100%;
-  background: ${p => p.theme.colors.sidebar};
-  color: ${p => p.theme.colors.text};
-  transition: 0.25s var(--ease-in-out-quad);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  width: 100vw;
+  overflow-y: auto;
   padding-left: 1vw;
   padding-right: 1vw;
 
-  transition: 0.25s var(--ease-in-out-quad);
-  transform: ${p => (p.navOpen ? null : `translateX(-100vw)`)};
-
-  ${mediaqueries.desktop_up`
-    width: 30vw;
-    transform: translateX(0);
-  `};
+  background: ${p => p.theme.colors.sidebar};
+  color: ${p => p.theme.colors.text};
 `;
 
 const SidebarToggle = styled.aside`
