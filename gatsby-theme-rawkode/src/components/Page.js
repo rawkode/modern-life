@@ -35,7 +35,7 @@ Page.propTypes = {
 
 export const pageQuery = graphql`
   query($id: String!) {
-    mdx(fields: { id: { eq: $id } }) {
+    mdx(id: { eq: $id }) {
       body
       frontmatter {
         title
