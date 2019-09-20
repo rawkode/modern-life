@@ -26,10 +26,11 @@ module.exports = themeOptions => {
       }
     },
     plugins: [
-      mdx && {
+      {
         resolve: `gatsby-plugin-mdx`,
         options: {
           extensions: [`.mdx`, `.md`],
+          defaultLayout: `./src/components/Layout.js`,
           gatsbyRemarkPlugins: [
             {
               resolve: `gatsby-remark-images`,
@@ -42,13 +43,6 @@ module.exports = themeOptions => {
             { resolve: `gatsby-remark-smartypants` }
           ],
           remarkPlugins: [require(`remark-slug`)]
-        }
-      },
-      {
-        resolve: 'gatsby-source-filesystem',
-        options: {
-          path: `pages`,
-          name: `pages`
         }
       },
       {
