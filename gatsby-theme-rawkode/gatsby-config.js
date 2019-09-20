@@ -30,18 +30,9 @@ module.exports = themeOptions => {
         resolve: `gatsby-plugin-mdx`,
         options: {
           extensions: [`.mdx`, `.md`],
-          defaultLayout: `./src/components/Layout.js`,
-          gatsbyRemarkPlugins: [
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                maxWidth: 1380,
-                linkImagesToOriginal: false
-              }
-            },
-            { resolve: `gatsby-remark-copy-linked-files` },
-            { resolve: `gatsby-remark-smartypants` }
-          ],
+          defaultLayouts: {
+            default: require.resolve('./src/components/Layout.js')
+          },
           remarkPlugins: [require(`remark-slug`)]
         }
       },

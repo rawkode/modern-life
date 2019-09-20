@@ -1,6 +1,7 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
+import { Styled } from 'theme-ui';
 import Layout from '../components/Layout';
 
 export default () => {
@@ -27,9 +28,9 @@ export default () => {
   `);
 
   const articles = data.allArticle.nodes.map(article => (
-    <a href={`/article${article.slug}`}>
-      <li key={article.id}>{article.title}</li>
-    </a>
+    <Styled.a as={Link} to={`/article${article.slug}`}>
+      {article.title}
+    </Styled.a>
   ));
 
   return (

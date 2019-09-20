@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Avatar from 'react-avatar';
+import { Styled } from 'theme-ui';
+import { Link } from 'gatsby';
 import SocialIcons from './SocialIcons';
 import mediaqueries from '../styles/media';
 
@@ -14,7 +16,9 @@ const Sidebar = ({ navOpen, toggleSidebar }) => {
       </SidebarToggle>
 
       <SidebarLinks>
-        <a href="/articles">Articles!</a>
+        <Styled.a as={Link} to="/articles">
+          Articles!
+        </Styled.a>
       </SidebarLinks>
       <SidebarProfile>
         <Avatar githubHandle="rawkode" size={100} round="20px" />
@@ -33,7 +37,6 @@ const Sidebar = ({ navOpen, toggleSidebar }) => {
 const SidebarContainer = styled.aside`
   display: flex;
   flex: 0 0 100vw;
-  height: 100vh;
   transform: ${p => (p.navOpen ? `translateX(0vw)` : `translateX(-100vw)`)};
   transition: transform 0.5s;
 
