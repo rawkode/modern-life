@@ -8,9 +8,8 @@ import mediaqueries from '../styles/media';
 import Header from './Header';
 import Sidebar from './Sidebar';
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children }) => {
   const [navOpen, setNavOpen] = useState(false);
-  console.log(`navOpen is ${navOpen}`);
   return (
     <Styled.root>
       <Global styles={globalStyles} />
@@ -58,8 +57,7 @@ const SiteContent = styled.main`
 `;
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  location: PropTypes.object.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;

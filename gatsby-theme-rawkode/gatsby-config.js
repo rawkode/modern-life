@@ -27,13 +27,10 @@ module.exports = themeOptions => {
     },
     plugins: [
       {
-        resolve: `gatsby-plugin-mdx`,
+        resolve: `gatsby-source-filesystem`,
         options: {
-          extensions: [`.mdx`, `.md`],
-          // defaultLayouts: {
-          //   default: require.resolve('./src/components/Layout.js')
-          // },
-          remarkPlugins: [require(`remark-slug`)]
+          name: `pages`,
+          path: `src/pages/`
         }
       },
       {
@@ -41,6 +38,20 @@ module.exports = themeOptions => {
         options: {
           path: options.contentPath || `content/articles`,
           name: options.contentPath || `content/articles`
+        }
+      },
+      {
+        resolve: 'gatsby-plugin-page-creator',
+        options: {
+          path: `src/pages`
+        }
+      },
+      {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+          defaultLayouts: {
+            default: require.resolve('./src/components/Layout.js').default
+          }
         }
       },
       {
