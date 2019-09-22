@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import ArticlesPage from './view';
+import ArticlesPage from './view-list';
 
 export default ArticlesPage;
 

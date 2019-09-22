@@ -19,5 +19,17 @@ module.exports = {
       ignoreIndex: true
     }
   },
-  plugins: [{ resolve: `gatsby-theme-rawkode`, options: {} }]
+  plugins: [
+    {
+      resolve: `gatsby-theme-rawkode`,
+      options: {
+        articles: {
+          source: `content/articles`,
+          slug: `article`
+        },
+        assetPath: `content/assets`,
+        pagePath: `content/pages`
+      }
+    }
+  ]
 };

@@ -9,9 +9,11 @@ import SEO from './SEO';
 const Page = ({ data, location }) => {
   const { mdx } = data;
 
+  console.log(data);
+
   return (
     <Layout location={location}>
-      <SEO title={mdx.frontmatter.title} description={mdx.frontmatter.description} />
+      <SEO title={mdx.frontmatter.title} />
       <Heading>{mdx.frontmatter.title}</Heading>
       <MDXRenderer>{mdx.body}</MDXRenderer>
     </Layout>
@@ -39,7 +41,6 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
-        description
       }
     }
   }

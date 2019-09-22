@@ -2,7 +2,6 @@ const withDefaults = require(`./src/theme-defaults`);
 
 module.exports = themeOptions => {
   const options = withDefaults(themeOptions);
-  const { mdx = true } = themeOptions;
 
   return {
     siteMetadata: {
@@ -29,21 +28,28 @@ module.exports = themeOptions => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: `pages`,
-          path: `src/pages/`
+          path: options.articles.source,
+          name: options.articles.source
         }
       },
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          path: options.contentPath || `content/articles`,
-          name: options.contentPath || `content/articles`
+          path: options.assetPath,
+          name: options.assetPath
         }
       },
       {
-        resolve: 'gatsby-plugin-page-creator',
+        resolve: `gatsby-source-filesystem`,
         options: {
-          path: `src/pages`
+          path: options.pagePath,
+          name: `pages`
+        }
+      },
+      {
+        resolve: `gatsby-plugin-page-creator`,
+        options: {
+          path: options.pagePath
         }
       },
       {

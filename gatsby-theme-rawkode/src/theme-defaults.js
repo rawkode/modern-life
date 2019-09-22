@@ -1,11 +1,11 @@
 module.exports = themeOptions => {
-  const basePath = themeOptions.basePath || `/`;
-  const contentPath = themeOptions.contentPath || `content/articles`;
-  const assetPath = themeOptions.assetPath || `content/assets`;
-
   return {
-    basePath,
-    contentPath,
-    assetPath
+    basePath: themeOptions.basePath || `/`,
+    articles: {
+      source: `content/articles` || themeOptions.articles.source,
+      slugPrefix: `article` || themeOptions.articles.slugPrefix
+    },
+    assetPath: themeOptions.assetPath || `content/assets`,
+    pagePath: themeOptions.pagePath || `content/pages`
   };
 };

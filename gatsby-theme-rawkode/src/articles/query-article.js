@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
-import ArticlesPage from './view';
+import ArticlePage from './view-single';
 
-export default ArticlesPage;
+export default ArticlePage;
 
 export const query = graphql`
   query ArticleQuery($id: String!, $previousId: String, $nextId: String) {
