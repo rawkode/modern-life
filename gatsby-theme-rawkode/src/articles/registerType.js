@@ -68,11 +68,20 @@ const createSlug = (node, parentNode, getNode, config) => {
       createFilePath({ node: parentNode, getNode, basePath: config.articles.slugPrefix })
     );
   }
+
   if (path.isAbsolute(node.frontmatter.slug)) {
     return node.frontmatter.slug;
   }
 
-  return urlResolve(config.articles.slugPrefix, node.frontmatter.slug);
+  const date = new Date(node.frontmatter.date);
+
+  return urlResolve(
+    config.articles.slugPrefix,
+    date.getFullYear().toString(),
+    date.getMonth().toString(),
+    date.getDay().toString(),
+    node.frontmatter.slug
+  );
 };
 
 const createFieldData = (node, slug) => {
@@ -93,6 +102,7 @@ const createArticleNodes = async (
   { createNode, createParentChildLink }
 ) => {
   const parentNode = getNode(node.parent);
+
   const slug = createSlug(node, parentNode, getNode, config);
   const fieldData = createFieldData(node, slug);
   const mdxArticleId = createNodeId(`${node.id} >>> MdxArticle`);
