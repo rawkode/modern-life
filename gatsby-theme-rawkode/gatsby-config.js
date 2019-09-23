@@ -56,7 +56,7 @@ module.exports = themeOptions => {
         resolve: `gatsby-plugin-mdx`,
         options: {
           defaultLayouts: {
-            default: require.resolve('./src/components/Layout.js').default
+            default: require.resolve('./src/components/Layout')
           }
         }
       },
