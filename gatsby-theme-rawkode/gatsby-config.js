@@ -56,7 +56,7 @@ module.exports = themeOptions => {
         resolve: `gatsby-plugin-mdx`,
         options: {
           defaultLayouts: {
-            default: require.resolve('./src/components/Layout')
+            default: require.resolve('./src/components/Layout').default
           }
         }
       },
@@ -72,6 +72,7 @@ module.exports = themeOptions => {
           icon: 'src/site-icon.png'
         }
       },
+      `gatsby-plugin-catch-links`,
       `gatsby-plugin-sharp`,
       `gatsby-plugin-emotion`,
       `gatsby-plugin-theme-ui`,

@@ -1,0 +1,11 @@
+version: '2.4'
+
+volumes:
+  vscode: ~
+
+services:
+  gatsby:
+    entrypoint: sleep
+    command: 1d
+    volumes:
+      - vscode:/root/.vscode-server

@@ -1,5 +1,5 @@
-FROM node:11-alpine AS base
+FROM alpine:3.9 AS base
 
 FROM base AS development
 
-RUN apk add --update git make python g++
+RUN apk add --update g++ git make nodejs python yarn
