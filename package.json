@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "yarn workspace example build"
+    "build": "yarn workspace website build"
   },
   "workspaces": [
     "gatsby-theme-rawkode",
