@@ -4,20 +4,14 @@ const headingBase = {
   fontWeight: 'heading',
   mt: 0,
   mb: 3,
-  '::before': {
-    content: '" "',
-    display: 'block',
-    paddingTop: 30,
-    marginBottom: 40,
-    borderBottom: '1px solid',
-    borderBottomColor: 'borderColor'
-  }
+  paddingBottom: 1
 };
 
 export default {
   h1: {
     ...headingBase,
-    fontSize: 5
+    fontSize: 5,
+    borderBottom: '3px solid'
   },
   h2: {
     ...headingBase,
@@ -25,11 +19,13 @@ export default {
   },
   h3: {
     ...headingBase,
-    fontSize: 3
+    fontSize: 3,
+    borderBottom: '2px dashed'
   },
   h4: {
     ...headingBase,
-    fontSize: 2
+    fontSize: 2,
+    borderBottom: '1px dashed'
   },
   h5: {
     ...headingBase,

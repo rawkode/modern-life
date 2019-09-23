@@ -62,15 +62,11 @@ const createArticleSchema = ({ createTypes }, schema) => {
 };
 
 const createSlug = (node, parentNode, getNode, config) => {
-  if (!node.frontmatter.slug) {
+  if (!node.frontmatter.date) {
     return urlResolve(
       config.articles.slugPrefix,
       createFilePath({ node: parentNode, getNode, basePath: config.articles.slugPrefix })
     );
-  }
-
-  if (path.isAbsolute(node.frontmatter.slug)) {
-    return node.frontmatter.slug;
   }
 
   const date = new Date(node.frontmatter.date);
@@ -80,7 +76,11 @@ const createSlug = (node, parentNode, getNode, config) => {
     date.getFullYear().toString(),
     date.getMonth().toString(),
     date.getDay().toString(),
-    node.frontmatter.slug
+    createFilePath({
+      node: parentNode,
+      getNode,
+      basePath: `${config.articles.slugPrefix}/${date.getFullYear().toString()}`
+    })
   );
 };
 

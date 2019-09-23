@@ -1,22 +1,22 @@
 export default {
-  text: '#131B23',
-  background: '#E9F1F7',
-  header: '#E7DFC6',
-  sidebar: '#E7DFC6',
+  text: '#2D3A3A',
+  background: '#FCFFFC',
+  header: '#00072D',
+  sidebar: '#00072D',
 
-  colorSwitcher: '#2274A5',
+  colorSwitcher: '#2BA84A',
 
-  primary: '#2274A5',
-  secondary: '#E7DFC6',
+  primary: '#0E6BA8',
+  secondary: '#A6E1FA',
 
   borderColor: 'rgba(255, 255, 255, 0.15)',
 
   modes: {
     dark: {
-      text: '#ECF0F1',
-      background: '#1B1725',
-      header: '#162228',
-      sidebar: '#162228',
+      text: '#FCFFFC',
+      background: '#00072D',
+      header: '#DCDCDC',
+      sidebar: '#DCDCDC',
 
       colorSwitcher: '#A8763E',
 

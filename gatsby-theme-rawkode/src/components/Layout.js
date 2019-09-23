@@ -34,7 +34,6 @@ const SiteWrapper = styled.div`
 
 const SiteContentWrapper = styled.div`
   display: flex;
-  flex: 1 0 100vw;
   flex-direction: column;
   transition: transform 0.5s;
   transform: ${p => (p.navOpen ? `translateX(0vw)` : `translateX(-100vw)`)};
@@ -48,12 +47,10 @@ const SiteContentWrapper = styled.div`
 `;
 
 const SiteContent = styled.main`
-  ${mediaqueries.desktop_up`
-    padding: 1em;
-    padding-top: 10vh;
-  `};
-
+  width: 100vw;
   padding-top: 10vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
 `;
 
 Layout.propTypes = {

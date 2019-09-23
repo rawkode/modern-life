@@ -21,7 +21,7 @@ const StyledLogoWrapper = styled.div`
 const LogoLink = styled(Link)`
   display: block;
   text-decoration: none;
-  color: ${p => p.theme.colors.text};
+  color: ${p => p.theme.colors.background};
   transition: color ${p => p.theme.transition};
   &:hover,
   &:focus {

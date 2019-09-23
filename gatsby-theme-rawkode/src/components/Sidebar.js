@@ -17,7 +17,7 @@ const Sidebar = ({ navOpen, toggleSidebar }) => {
 
       <SidebarLinks>
         <Styled.a as={Link} to="/articles">
-          Articles!
+          Articles
         </Styled.a>
       </SidebarLinks>
       <SidebarProfile>
@@ -37,6 +37,7 @@ const Sidebar = ({ navOpen, toggleSidebar }) => {
 const SidebarContainer = styled.aside`
   display: flex;
   flex: 0 0 100vw;
+  height: 100vh;
   transform: ${p => (p.navOpen ? `translateX(0vw)` : `translateX(-100vw)`)};
   transition: transform 0.5s;
 
@@ -48,7 +49,7 @@ const SidebarContainer = styled.aside`
   padding-right: 1vw;
 
   background: ${p => p.theme.colors.sidebar};
-  color: ${p => p.theme.colors.text};
+  color: ${p => p.theme.colors.background};
 
   ${mediaqueries.desktop_up`
     position: fixed;

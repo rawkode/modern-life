@@ -50,7 +50,7 @@ const StyledHeader = styled.header`
   z-index: 5;
   background: ${p => p.theme.colors.sidebar};
   transition: all 0.25s var(--ease-in-out-quad);
-  color: ${p => p.theme.colors.text};
+  color: ${p => p.theme.colors.background};
 
   ${mediaqueries.desktop_up`
     top: 0vw;
