@@ -16,8 +16,8 @@ const Sidebar = ({ navOpen, toggleSidebar }) => {
       </SidebarToggle>
 
       <SidebarLinks>
-        <Styled.a as={Link} to="/articles">
-          Articles
+        <Styled.a as={Link} to="/blog">
+          Blog
         </Styled.a>
       </SidebarLinks>
       <SidebarProfile>

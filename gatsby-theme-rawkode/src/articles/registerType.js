@@ -2,6 +2,7 @@ const path = require(`path`);
 const crypto = require(`crypto`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const { urlResolve } = require(`gatsby-core-utils`);
+const slugify = require('slugify');
 
 const mdxResolverPassthrough = fieldName => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`);
@@ -65,7 +66,9 @@ const createSlug = (node, parentNode, getNode, config) => {
   if (!node.frontmatter.date) {
     return urlResolve(
       config.articles.slugPrefix,
-      createFilePath({ node: parentNode, getNode, basePath: config.articles.slugPrefix })
+      slugify(node.frontmatter.title, {
+        lower: true
+      })
     );
   }
 
@@ -74,12 +77,10 @@ const createSlug = (node, parentNode, getNode, config) => {
   return urlResolve(
     config.articles.slugPrefix,
     date.getFullYear().toString(),
-    date.getMonth().toString(),
-    date.getDay().toString(),
-    createFilePath({
-      node: parentNode,
-      getNode,
-      basePath: `${config.articles.slugPrefix}/${date.getFullYear().toString()}`
+    `0${date.getMonth() + 1}`.slice(-2),
+    `0${date.getDate()}`.slice(-2),
+    slugify(node.frontmatter.title, {
+      lower: true
     })
   );
 };
@@ -172,7 +173,7 @@ const createArticlePages = async (config, graphql, actions, reporter) => {
   });
 
   createPage({
-    path: `${config.articles.slugPrefix}s`,
+    path: config.articles.slugPrefix,
     component: ArticleListTemplate,
     context: {}
   });
