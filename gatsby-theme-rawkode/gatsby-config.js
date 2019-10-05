@@ -98,6 +98,7 @@ module.exports = themeOptions => {
       `gatsby-plugin-emotion`,
       `gatsby-plugin-theme-ui`,
       `gatsby-plugin-react-helmet`,
+      `gatsby-plugin-robots-txt`,
       `gatsby-plugin-sitemap`
     ]
   };
