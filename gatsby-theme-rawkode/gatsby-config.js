@@ -84,12 +84,21 @@ module.exports = themeOptions => {
           chunkSize: 10000
         }
       },
+      {
+        resolve: 'gatsby-plugin-google-tagmanager',
+        options: {
+          id: 'GTM-5Q6RG35',
+          includeInDevelopment: false,
+          defaultDataLayer: { platform: 'gatsby' }
+        }
+      },
       `gatsby-plugin-styled-components`,
       `gatsby-plugin-catch-links`,
       `gatsby-plugin-sharp`,
       `gatsby-plugin-emotion`,
       `gatsby-plugin-theme-ui`,
-      `gatsby-plugin-react-helmet`
+      `gatsby-plugin-react-helmet`,
+      `gatsby-plugin-sitemap`
     ]
   };
 };

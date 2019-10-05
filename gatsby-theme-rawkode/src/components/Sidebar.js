@@ -8,7 +8,6 @@ import SocialIcons from './SocialIcons';
 import mediaqueries from '../styles/media';
 
 const Sidebar = ({ navOpen, toggleSidebar }) => {
-  console.log(`toggle is ${navOpen}`);
   return (
     <SidebarContainer navOpen={navOpen}>
       <SidebarToggle>
