@@ -49,7 +49,7 @@ export default {
     },
     pre: {
       ...nightOwl,
-      fontFamily: `"Operator Mono", monospace`,
+      fontFamily: `"Cascadia Code", monospace`,
       fontSize: '0.9rem',
       tabSize: 4,
       hyphens: `none`,

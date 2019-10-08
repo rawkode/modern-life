@@ -1,6 +1,11 @@
 import { css } from '@emotion/core';
 
 const globalStyles = css`
+  @font-face {
+    font-family: Cascadia Code;
+    src: url(https://github.com/microsoft/cascadia-code/blob/master/CascadiaCode-Regular-VTT.ttf?raw=true);
+  }
+
   /**
    * Thanks to Benjamin De Cock
    * https://gist.github.com/bendc/ac03faac0bf2aee25b49e5fd260a727d
