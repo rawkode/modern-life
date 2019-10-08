@@ -1,3 +1,5 @@
+const emoji = require(`remark-emoji`);
+
 const withDefaults = require(`./src/theme-defaults`);
 const queries = require('./src/utils/algolia');
 
@@ -50,6 +52,13 @@ module.exports = themeOptions => {
         }
       },
       {
+        resolve: `gatsby-plugin-google-fonts`,
+        options: {
+          fonts: ['Spectral', `Noto Color Emoji`],
+          display: 'swap'
+        }
+      },
+      {
         resolve: `gatsby-plugin-page-creator`,
         options: {
           path: options.pagePath
@@ -60,7 +69,8 @@ module.exports = themeOptions => {
         options: {
           defaultLayouts: {
             default: require.resolve('./src/components/Layout').default
-          }
+          },
+          remarkPlugins: [emoji]
         }
       },
       {

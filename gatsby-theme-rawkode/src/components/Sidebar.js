@@ -18,6 +18,9 @@ const Sidebar = ({ navOpen, toggleSidebar }) => {
         <Styled.a as={Link} to="/blog">
           Blog
         </Styled.a>
+        <Styled.a as={Link} to="/about">
+          About
+        </Styled.a>
       </SidebarLinks>
       <SidebarProfile>
         <Avatar githubHandle="rawkode" size={100} round="20px" />

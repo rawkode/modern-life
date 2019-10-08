@@ -3,8 +3,7 @@ import colors from './colors';
 import headings from './headings';
 
 const transition = '0.2s ease-out';
-const systemFonts =
-  '-apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif';
+const systemFonts = 'Spectral, Noto Color Emoji';
 
 export default {
   initialColorMode: `dark`,
