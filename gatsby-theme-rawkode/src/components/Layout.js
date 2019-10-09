@@ -50,7 +50,11 @@ const SiteContent = styled.main`
   width: 100vw;
   padding-top: 10vh;
   padding-left: 1vw;
-  padding-right: 1vw;
+  padding-right: 2vw;
+
+  ${mediaqueries.desktop_up`
+    width: 70vw;
+  `};
 `;
 
 Layout.propTypes = {
