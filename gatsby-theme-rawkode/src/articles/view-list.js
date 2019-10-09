@@ -3,6 +3,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Link } from 'gatsby';
 import { Styled } from 'theme-ui';
 import Layout from '../components/Layout';
+import ListItem from './view-list-item';
 
 export default ({ location, data }) => {
   const { allArticle } = data;
@@ -10,11 +11,13 @@ export default ({ location, data }) => {
   return (
     <Layout>
       {allArticle.edges.map(({ node }) => (
-        <li>
-          <Styled.a as={Link} to={node.slug}>
-            {node.title}
-          </Styled.a>
-        </li>
+        <ListItem
+          title={node.title}
+          tags={node.tags}
+          excerpt={node.excerpt}
+          date={node.date}
+          uri={node.slug}
+        />
       ))}
     </Layout>
   );
