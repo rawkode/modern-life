@@ -4,6 +4,7 @@ import React from 'react';
 import Avatar from 'react-avatar';
 import { Styled } from 'theme-ui';
 import { Link } from 'gatsby';
+import Menu from './Menu';
 import SocialIcons from './SocialIcons';
 import mediaqueries from '../styles/media';
 
@@ -14,14 +15,10 @@ const Sidebar = ({ navOpen, toggleSidebar }) => {
         <a onClick={() => toggleSidebar(!navOpen)}>&times;</a>
       </SidebarToggle>
 
-      <SidebarLinks>
-        <Styled.a as={Link} to="/blog">
-          Blog
-        </Styled.a>
-        <Styled.a as={Link} to="/about">
-          About
-        </Styled.a>
-      </SidebarLinks>
+      <MenuWrapper>
+        <Menu />
+      </MenuWrapper>
+
       <SidebarProfile>
         <Avatar githubHandle="rawkode" size={100} round="20px" />
         <h1>Rawkode</h1>
@@ -60,7 +57,7 @@ const SidebarContainer = styled.aside`
   `};
 `;
 
-const SidebarLinks = styled.aside`
+const MenuWrapper = styled.aside`
   display: flex;
   flex: 1 1 30vw;
   flex-direction: column;
