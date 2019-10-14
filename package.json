@@ -8,6 +8,7 @@
     "build": "yarn workspace website gatsby build"
   },
   "workspaces": [
+    "gatsby-theme-devrel",
     "gatsby-theme-rawkode",
     "website"
   ],

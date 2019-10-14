@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "gatsby": "^2.15.20",
+    "gatsby-theme-devrel": "*",
     "gatsby-theme-rawkode": "*",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"

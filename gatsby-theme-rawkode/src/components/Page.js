@@ -9,8 +9,6 @@ import SEO from './SEO';
 const Page = ({ data, location }) => {
   const { mdx } = data;
 
-  console.log(data);
-
   return (
     <Layout location={location}>
       <SEO title={mdx.frontmatter.title} />

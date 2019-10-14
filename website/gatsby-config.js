@@ -21,6 +21,20 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-theme-devrel`,
+      options: {
+        mdxLayout: require.resolve(`../gatsby-theme-rawkode/src/components/Layout.js`),
+        abstracts: {
+          source: `content/abstracts`,
+          slug: `abstract`
+        },
+        events: {
+          source: `content/events`,
+          slug: `event`
+        }
+      }
+    },
+    {
       resolve: `gatsby-theme-rawkode`,
       options: {
         articles: {
