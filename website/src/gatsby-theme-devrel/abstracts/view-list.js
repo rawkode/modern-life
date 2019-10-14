@@ -9,7 +9,7 @@ export default ({ location, data }) => {
 
   return (
     <Layout>
-      <Styled.h1>Speaking</Styled.h1>
+      <Styled.h1>Public Speaking</Styled.h1>
       <Styled.p>
         I am more than happy to come and speak at your event. Please find a list of abstracts I have
         available.

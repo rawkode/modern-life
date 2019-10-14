@@ -14,7 +14,7 @@ const Menu = () => {
       </Styled.a>
       <br />
       <Styled.a as={Link} to="/abstract">
-        Abstracts
+        Public Speaking
       </Styled.a>
     </div>
   );

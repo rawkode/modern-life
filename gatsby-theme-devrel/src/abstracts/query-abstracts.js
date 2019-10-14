@@ -10,7 +10,7 @@ export const query = graphql`
         title
       }
     }
-    allAbstract(sort: { fields: [title], order: DESC }, limit: 1000) {
+    allAbstract(sort: { fields: [title], order: ASC }, limit: 1000) {
       edges {
         node {
           id
