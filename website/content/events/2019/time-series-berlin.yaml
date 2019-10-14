@@ -1,0 +1,8 @@
+title: "Time Series Berlin"
+startDate: "28/10/2019"
+country: "Germany"
+city: "Berlin"
+url: ""
+presenting:
+  - kind: "presentation"
+    abstract: "telegraf-toolbelt"

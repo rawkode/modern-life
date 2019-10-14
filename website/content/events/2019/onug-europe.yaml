@@ -1,0 +1,15 @@
+title: "ONUG Europe 2019"
+startDate: "04/12/2019"
+endDate: "06/12/2019"
+country: "England"
+city: "London"
+url: "https://www.onug.net/events/europe-2019/"
+hashtags: ["onug"]
+presenting:
+  - kind: "panel"
+    title: "Cloud Native DevOps Track: Agile for Infrastructure: The Top 5 Things You Need to Do"
+    date: "05/12/2019"
+    startTime: "1545"
+    endTime: "1630"
+    description: |
+      The shift from hardware to software-based infrastructure is accelerating. Thus, the way infrastructure is envisioned, designed and deployed is transitioning toward software best practices of Agile project management and DevOps. DevOps is done by infrastructure groups to support application teams, but how do infrastructure teams use Agile and DevOps practices to deliver infrastructure services?  In this session, we discuss the challenges and opportunities of operationalizing automated infrastructure as code, be it in private clouds or IaaS consumption.

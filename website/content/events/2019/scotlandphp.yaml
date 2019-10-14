@@ -1,0 +1,14 @@
+title: "ScotlandPHP"
+startDate: "08/11/2019"
+endDate: "09/11/2019"
+country: "Scotland"
+city: "Edinburgh"
+url: "https://conference.scotlandphp.co.uk"
+hashtags: ["scotphp19"]
+presenting:
+  - kind: "workshop"
+    abstract: "introduction-time-series"
+    date: "08/10/2019"
+    startTime: "1345"
+    endTime: "1700"
+    track: "2"

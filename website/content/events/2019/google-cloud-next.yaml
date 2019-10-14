@@ -1,0 +1,10 @@
+title: "Google Cloud Next"
+startDate: "20/11/2019"
+endDate: "21/11/2019"
+country: "England"
+city: "London"
+url: "https://cloud.withgoogle.com/next/uk"
+hashtags: ["gcpnext"]
+presenting:
+  - kind: "sponsor"
+    representing: "InfluxData"

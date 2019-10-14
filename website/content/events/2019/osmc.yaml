@@ -1,0 +1,13 @@
+title: "Open Source Monitoring Conference"
+startDate: "04/10/2019"
+endDate: "06/10/2019"
+country: "Germany"
+city: "NÜrnberg"
+url: "https://osmc.de/"
+presenting:
+  - kind: "presentation"
+    abstract: "telegraf-toolbelt"
+    date: "05/10/2019"
+    startTime: "1145"
+    endTime: "1245"
+    track: "Elisabeth"
