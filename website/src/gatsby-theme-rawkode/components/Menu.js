@@ -16,6 +16,10 @@ const Menu = () => {
       <Styled.a as={Link} to="/abstract">
         Public Speaking
       </Styled.a>
+      <br />
+      <Styled.a as={Link} to="/event">
+        Events
+      </Styled.a>
     </div>
   );
 };
