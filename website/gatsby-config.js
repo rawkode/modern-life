@@ -26,11 +26,11 @@ module.exports = {
         mdxLayout: require.resolve(`../gatsby-theme-rawkode/src/components/Layout.js`),
         abstracts: {
           source: `content/abstracts`,
-          slug: `abstract`
+          slugPrefix: `abstracts`
         },
         events: {
           source: `content/events`,
-          slug: `event`
+          slugPrefix: `events`
         }
       }
     },
@@ -39,7 +39,7 @@ module.exports = {
       options: {
         articles: {
           source: `content/articles`,
-          slug: `article`
+          slugPrefix: `articles`
         },
         assetPath: `content/assets`,
         pagePath: `content/pages`

@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 const Menu = () => {
   return (
     <div>
-      <Styled.a as={Link} to="/blog">
+      <Styled.a as={Link} to="/articles">
         Blog
       </Styled.a>
       <br />
@@ -13,11 +13,11 @@ const Menu = () => {
         About
       </Styled.a>
       <br />
-      <Styled.a as={Link} to="/abstract">
+      <Styled.a as={Link} to="/abstracts">
         Public Speaking
       </Styled.a>
       <br />
-      <Styled.a as={Link} to="/event">
+      <Styled.a as={Link} to="/events">
         Events
       </Styled.a>
     </div>

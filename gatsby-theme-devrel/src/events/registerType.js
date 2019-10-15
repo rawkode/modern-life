@@ -53,8 +53,13 @@ const createEventSchema = ({ createTypes }, schema) => {
 };
 
 const createSlug = (node, config) => {
+  const date = new Date(node.frontmatter.startDate);
+
   return urlResolve(
     config.events.slugPrefix,
+    date.getFullYear().toString(),
+    `0${date.getMonth() + 1}`.slice(-2),
+    `0${date.getDate()}`.slice(-2),
     slugify(node.frontmatter.title, {
       lower: true
     })
