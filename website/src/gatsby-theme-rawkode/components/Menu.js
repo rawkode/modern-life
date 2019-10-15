@@ -5,20 +5,16 @@ import { Link } from 'gatsby';
 const Menu = () => {
   return (
     <div>
-      <Styled.a as={Link} to="/articles">
-        Blog
-      </Styled.a>
-      <br />
       <Styled.a as={Link} to="/about">
         About
       </Styled.a>
       <br />
-      <Styled.a as={Link} to="/abstracts">
-        Public Speaking
+      <Styled.a as={Link} to="/articles">
+        Articles
       </Styled.a>
       <br />
-      <Styled.a as={Link} to="/events">
-        Events
+      <Styled.a as={Link} to="/public-speaking">
+        Public Speaking
       </Styled.a>
     </div>
   );
