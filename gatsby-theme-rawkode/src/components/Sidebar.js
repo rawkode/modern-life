@@ -47,8 +47,8 @@ const SidebarContainer = styled.aside`
   padding-left: 1vw;
   padding-right: 1vw;
 
-  background: ${p => p.theme.colors.sidebar};
-  color: ${p => p.theme.colors.background};
+  background: ${p => p.theme.colors.frameBackground};
+  color: ${p => p.theme.colors.frameText};
 
   ${mediaqueries.desktop_up`
     position: fixed;

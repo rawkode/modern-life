@@ -44,7 +44,7 @@ export default {
       color: 'secondary',
       transition: `color ${transition}`,
       ':hover,:focus': {
-        color: 'text'
+        color: 'primary'
       }
     },
     pre: {

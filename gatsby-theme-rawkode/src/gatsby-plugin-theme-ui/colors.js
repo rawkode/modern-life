@@ -1,29 +1,22 @@
 export default {
-  text: '#2D3A3A',
-  background: '#FCFFFC',
-  header: '#00072D',
-  sidebar: '#00072D',
+  initialColorModeName: 'dark',
+  useColorSchemeMediaQuery: true,
 
-  colorSwitcher: '#2BA84A',
-
-  primary: '#0E6BA8',
-  secondary: '#A6E1FA',
+  frameBackground: '#333333',
+  frameText: '#FAF8FF',
 
   borderColor: 'rgba(255, 255, 255, 0.15)',
 
+  background: '#2A2A2A',
+  text: '#FAF8FF',
+
+  primary: '#07ACC4',
+  secondary: '#D9414B',
+
   modes: {
-    dark: {
-      text: '#FCFFFC',
-      background: '#00072D',
-      header: '#DCDCDC',
-      sidebar: '#DCDCDC',
-
-      colorSwitcher: '#A8763E',
-
-      primary: '#6F1A07',
-      secondary: '#A8763E',
-
-      borderColor: 'rgba(255, 255, 255, 0.15)'
+    light: {
+      background: '#FAF8FF',
+      text: '#2A2A2A'
     }
   }
 };

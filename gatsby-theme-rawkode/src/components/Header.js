@@ -48,9 +48,9 @@ const StyledHeader = styled.header`
   align-items: center;
   padding: 1rem 1rem;
   z-index: 5;
-  background: ${p => p.theme.colors.sidebar};
+  background: ${p => p.theme.colors.frameBackground};
   transition: all 0.25s var(--ease-in-out-quad);
-  color: ${p => p.theme.colors.background};
+  color: ${p => p.theme.colors.frameText};
 
   ${mediaqueries.desktop_up`
     top: 0vw;
