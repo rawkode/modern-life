@@ -14,11 +14,12 @@ const StyledIconButton = styled.button`
   padding: 0;
   background: none;
   border: none;
-  color: ${p => p.theme.colors.secondary};
+  color: ${p => p.theme.colors.primary};
   cursor: pointer;
   font-size: 0.8rem;
+
   &:hover {
-    color: ${p => p.theme.colors.primary};
+    color: ${p => p.theme.colors.secondary};
   }
 `;
 

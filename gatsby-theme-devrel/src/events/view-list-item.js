@@ -6,17 +6,16 @@ import { Styled } from 'theme-ui';
 export default ({ node }) => (
   <AbstractCard>
     <Styled.a as={Link} to={node.slug}>
-      <Styled.h2>{node.title}</Styled.h2>
-      <Styled.p>
-        {node.startDate}
-        {node.endDate ? ` - ${node.endDate}` : ''}: {node.city}, {node.country}{' '}
-      </Styled.p>
+      {node.title}
     </Styled.a>
+    <Styled.p>
+      {node.startDate}
+      {node.endDate ? ` - ${node.endDate}` : ''}: {node.city}, {node.country}{' '}
+    </Styled.p>
   </AbstractCard>
 );
 
 const AbstractCard = styled.div`
-  border: 1px dashed black;
   transition: 0.3s;
   padding: 1em;
 

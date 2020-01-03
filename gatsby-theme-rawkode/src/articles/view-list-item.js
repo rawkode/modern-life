@@ -15,7 +15,6 @@ export default ({ title, excerpt, tags, date, uri }) => (
 );
 
 const ArticleCard = styled.div`
-  border: 1px dashed black;
   transition: 0.3s;
   padding: 1em;
 

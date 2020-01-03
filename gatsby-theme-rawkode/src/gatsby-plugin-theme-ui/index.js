@@ -3,7 +3,7 @@ import colors from './colors';
 import headings from './headings';
 
 const transition = '0.2s ease-out';
-const systemFonts = 'Spectral, Noto Color Emoji';
+const systemFonts = 'Bitter, Noto Color Emoji';
 
 export default {
   initialColorMode: `dark`,
@@ -11,7 +11,7 @@ export default {
   fonts: {
     body: systemFonts,
     heading: systemFonts,
-    monospace: 'Menlo, monospace'
+    monospace: 'Cascadia Code, Roboto Mono, monospace'
   },
   fontSizes: [12, 14, 16, 24, 28, 36, 48, 64],
   fontWeights: {
@@ -41,15 +41,16 @@ export default {
       my: 4
     },
     a: {
-      color: 'secondary',
+      color: 'primary',
       transition: `color ${transition}`,
+      textDecoration: 'none',
       ':hover,:focus': {
-        color: 'primary'
+        color: 'secondary'
       }
     },
     pre: {
       ...nightOwl,
-      fontFamily: `"Cascadia Code", monospace`,
+      fontFamily: 'monospace',
       fontSize: '0.9rem',
       tabSize: 4,
       hyphens: `none`,
@@ -59,7 +60,7 @@ export default {
       my: 4
     },
     inlineCode: {
-      color: `primary`,
+      color: `secondary`,
       background: `rgba(233, 218, 172, 0.15)`,
       borderRadius: 3,
       px: `0.4rem`,

@@ -22,6 +22,7 @@ const createAbstractSchema = ({ createTypes }, schema) => {
       title: String!
       slug: String!
       body: String!
+      tags: [String]
   }`);
 
   createTypes(
@@ -38,6 +39,9 @@ const createAbstractSchema = ({ createTypes }, schema) => {
         body: {
           type: `String!`,
           resolve: mdxResolverPassthrough(`body`)
+        },
+        tags: {
+          type: `[String]`
         }
       },
       interfaces: [`Node`, `Abstract`]
@@ -57,7 +61,8 @@ const createSlug = (node, config) => {
 const createFieldData = (node, slug) => {
   return {
     title: node.frontmatter.title,
-    slug
+    slug,
+    tags: node.frontmatter.tags
   };
 };
 
@@ -92,8 +97,8 @@ const createAbstractNodes = async (
 };
 
 // These templates are simply data-fetching wrappers that import components
-const AbstractListTemplate = require.resolve(`./query-abstracts.js`);
-const AbstractTemplate = require.resolve(`./query-abstract.js`);
+const AbstractListTemplate = require.resolve(`./query-abstracts`);
+const AbstractTemplate = require.resolve(`./query-abstract`);
 
 const createAbstractPages = async (config, graphql, actions, reporter) => {
   const { createPage } = actions;
@@ -104,7 +109,9 @@ const createAbstractPages = async (config, graphql, actions, reporter) => {
         edges {
           node {
             id
+            title
             slug
+            tags
           }
         }
       }

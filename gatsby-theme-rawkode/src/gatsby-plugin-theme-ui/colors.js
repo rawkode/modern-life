@@ -2,13 +2,13 @@ export default {
   initialColorModeName: 'dark',
   useColorSchemeMediaQuery: true,
 
-  frameBackground: '#333333',
-  frameText: '#FAF8FF',
+  frameBackground: '#0F0E15',
+  frameText: '#FAFAFC',
 
   borderColor: 'rgba(255, 255, 255, 0.15)',
 
-  background: '#2A2A2A',
-  text: '#FAF8FF',
+  background: '#292933',
+  text: '#FAFAFC',
 
   primary: '#07ACC4',
   secondary: '#D9414B',

@@ -28,6 +28,7 @@
     "@emotion/styled": "^10.0.15",
     "@mdx-js/mdx": "^1.4.5",
     "@mdx-js/react": "^1.4.5",
+    "@theme-ui/presets": "^0.2.44",
     "@theme-ui/prism": "^0.2.29",
     "algoliasearch": "^3.34.0",
     "babel-plugin-styled-components": "^1.10.6",

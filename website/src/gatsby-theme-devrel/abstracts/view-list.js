@@ -1,19 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { Styled } from 'theme-ui';
-import Layout from 'gatsby-theme-rawkode/src/components/Layout';
 import ListItem from 'gatsby-theme-devrel/src/abstracts/view-list-item';
+import Layout from 'gatsby-theme-rawkode/src/components/Layout';
 
 export default ({ location, data }) => {
   const { allAbstract } = data;
 
-  return (
-    <Layout>
-      <Styled.h1>Abstracts</Styled.h1>
+  const items = allAbstract.edges.map(({ node }) => (
+    <ListItem title={node.title} tags={node.tags} uri={node.slug} />
+  ));
 
-      {allAbstract.edges.map(({ node }) => (
-        <ListItem title={node.title} uri={node.slug} />
-      ))}
-    </Layout>
-  );
+  return <Layout>{items}</Layout>;
 };

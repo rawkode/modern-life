@@ -15,6 +15,7 @@ export const query = graphql`
       slug
       title
       body
+      tags
     }
     previous: abstract(id: { eq: $previousId }) {
       id
