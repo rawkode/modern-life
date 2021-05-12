@@ -54,7 +54,7 @@
     "gatsby-remark-smartypants": "^2.1.8",
     "gatsby-source-filesystem": "^2.1.19",
     "gatsby-transformer-remark": "^2.6.19",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
     "react-avatar": "^3.7.0",
     "react-helmet": "^5.2.1",
